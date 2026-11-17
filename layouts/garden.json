@@ -1,0 +1,131 @@
+{
+  "id": "garden-root",
+  "type": "column",
+  "children": [
+    {
+      "id": "garden-plots",
+      "type": "block",
+      "content": {
+        "mod": "garden-patch"
+      },
+      "size": {
+        "px": 370
+      },
+      "min": 300,
+      "max": 600
+    },
+    {
+      "id": "body",
+      "type": "row",
+      "children": [
+        {
+          "id": "work",
+          "type": "column",
+          "children": [
+            {
+              "id": "bar",
+              "type": "block",
+              "content": {
+                "mod": "garden-bar"
+              },
+              "size": {
+                "px": 43
+              }
+            },
+            {
+              "id": "main",
+              "type": "block",
+              "content": {
+                "tab": "active",
+                "pane": {
+                  "header": {
+                    "content": {
+                      "mod": "pane"
+                    },
+                    "reveal": "always",
+                    "height": 28,
+                    "position": "top"
+                  },
+                  "background": "background",
+                  "border": {
+                    "width": 1,
+                    "color": "border"
+                  },
+                  "focus": {
+                    "width": 1,
+                    "color": "accent"
+                  },
+                  "radius": 8,
+                  "gap": 6,
+                  "lone": true
+                }
+              },
+              "background": "canvas",
+              "padding": 6
+            },
+            {
+              "id": "shell",
+              "type": "column",
+              "children": [
+                {
+                  "id": "shell-bar",
+                  "type": "block",
+                  "content": {
+                    "mod": "garden-bar",
+                    "props": {
+                      "role": "shell"
+                    }
+                  },
+                  "size": {
+                    "px": 30
+                  }
+                }
+              ],
+              "size": {
+                "px": 170
+              },
+              "min": 90,
+              "max": 700
+            }
+          ],
+          "divider": {
+            "width": 1,
+            "color": "border"
+          }
+        }
+      ],
+      "divider": {
+        "width": 1,
+        "color": "border"
+      }
+    }
+  ],
+  "theme": "moss",
+  "terminal_padding": [
+    10,
+    6
+  ],
+  "terminal_opacity": 1,
+  "divider": {
+    "width": 1,
+    "color": "border"
+  },
+  "traffic_lights": [
+    14,
+    14
+  ],
+  "preview": "layouts/garden.svg",
+  "colors": {
+    "accent": "#c4e68b",
+    "accent_foreground": "#2e4b2b",
+    "chrome": "#1d3025",
+    "canvas": "#17251e",
+    "background": "#14221b",
+    "surface": "#21372a",
+    "border": "#36543d",
+    "selected": "#35533b",
+    "input": "#57754a",
+    "foreground": "#edf0dd",
+    "muted": "#a7b99a"
+  }
+}
