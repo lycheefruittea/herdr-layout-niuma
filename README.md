@@ -1,3 +1,42 @@
+# Noob crew — Garden layout
+
+A Grow a Garden-inspired variant of [NiuMa by limbov8](https://github.com/limbov8/herdr-layout-niuma), with **original Roblox noob-style figures**: yellow heads and arms, blue torsos, green legs, miniature noob helpers, and a tool-shed shell in a blocky garden. This fork does not include extracted Roblox assets or claim affiliation with Roblox or Grow a Garden.
+
+![Garden with sample agents](garden-preview.png)
+
+## Install Garden
+
+Launch Herdr once so `~/.config/herdr-app` exists, then run from this repository:
+
+```sh
+python3 install_garden.py
+herdr-app check ~/.config/herdr-app/mods/garden-patch
+herdr-app check ~/.config/herdr-app/mods/garden-bar
+herdr-app do layout.switch '{"name":"garden"}'
+```
+
+The installer adds only Garden's files and keys, backs up `keys.json`, and refuses existing Garden names or conflicting bindings. It leaves NiuMa available. It does not edit your shell startup files. To use a nondefault Herdr home, pass `--home /path/to/home`.
+
+Click an agent button to add a noob to your crew. Working noobs use a laptop, blocked noobs raise a hand with **!**, completed noobs celebrate, and idle noobs stand ready. Click a figure to return to its terminal.
+
+| Key | Action |
+|---|---|
+| ⌘T | New panel |
+| ⌘⇧T | New panel with the first installed agent |
+| ⌘W | Close focused panel |
+| ⌘N | New space |
+| ⌘1–9 | Switch spaces |
+| ⇧⌘[ / ⇧⌘] | Previous / next space |
+| Ctrl+Shift+L | Switch layouts |
+
+Garden runs local Herdr commands to read agent screens and manage panels/the shell. It adds no network requests or session-log scanning. Agent launch commands come from Herdr's configuration; incompatible CLI flags can be adjusted in `programs.json`.
+
+See [GARDEN-RECIPE.md](GARDEN-RECIPE.md) for behavior, art provenance and limitations. Regenerate the noob figures and layout thumbnail with `python3 mods/garden-patch/tools/noobs.py`; `tools/art.py` contains the garden scenery generator. Development checks: `python3 -m unittest discover -s tests -v` (Node is also needed for the pure JavaScript model checks).
+
+---
+
+The original NiuMa layout and its documentation follow.
+
 # NiuMa — a Herdr layout
 
 Your coding agents graze in a pixel-art pasture: horses, cows, a bull, an ox, a water
